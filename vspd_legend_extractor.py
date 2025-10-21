@@ -135,7 +135,8 @@ def parse_plant_text(raw_text):
 
         # Extract height × width
         dim_match = re.search(r"(\\d+['′]?)\\s*[×x]\\s*(\\d+['′]?)", desc)
-        dims = f\"{dim_match.group(1)} × {dim_match.group(2)}\" if dim_match else \"\"
+        dims = f"{dim_match.group(1)} × {dim_match.group(2)}" if dim_match else ""
+
 
         # Extract size
         size_match = re.search(r\"(\\d+\\s*(?:[Gg]al|[Bb]ox|[Ii][Nn]\\.?|[Ff]t\\.?|BTH|Bare Root).*)\", desc)
